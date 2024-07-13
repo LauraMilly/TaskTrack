@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TaskTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="user">
+            <img src="img/9334389.jpg" id="user_avatar" alt="Avatar">
+
+            <p id="user_infos">
+                <span class="item-description">
+                    Bem vindo,
+                </span>
+                <span class="item-description">
+                    Usuário
+                </span>
+            </p>
+        </div>
+
+        <ul id="side_items">
+            <li class="side-item active">
+                <a href="#">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="item-description">
+                        Calendário
+                    </span>
+                </a>
+            </li>
+
+            <li class="side-item">
+                <a href="#">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="item-description">
+                        Tarefas
+                    </span>
+                </a>
+            </li>
+
+            <li class="side-item">
+                <a href="#">
+                    <i class="fa-brands fa-rocketchat"></i>
+                    <span class="item-description">
+                        Chat
+                    </span>
+                </a>
+            </li>
+
+            <li class="side-item">
+                <a href="#">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="item-description">
+                        Notificação
+                    </span>
+                </a>
+            </li>
+            
+            <li class="side-item">
+                <a href="https://github.com/LauraMilly">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="item-description">
+                        Github
+                    </span>
+                </a>
+            </li>
+
+            <li class="side-item">
+                <a href="https://www.linkedin.com/in/laura-souza-4a729b252/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="item-description">
+                        Linkedin
+                    </span>
+                </a>
+            </li>
+
+            <li class="side-item">
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span class="item-description">
+                        Configurações
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <button id="open_btn">
+            <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div id="img-bottom">
+        <img src="img/undraw_schedule_meeting_52nu.svg" alt="">
+    </div>
+</nav>
+    </nav>
+
+    <main>
+        <div class="container-taskcalender">
+                <div class="title">
+                    <div class="search-container">
+                        <input type="text" placeholder="Pesquisar...">
+                        <button class="search" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <h1>Olá, usuário <span'>&#128075;</span> !</h1>
+                </div>
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prev-btn">&lt;</button>
+                        <h2 id="month-year"></h2>
+                        <button id="next-btn">&gt;</button>
+                    </div>
+                <div class="days" id="days-container"></div>
+                </div>
+
+            <div class="title">
+                <h2>Tarefas</h2>
+            </div>
+            <div class="container-form">
+                <form id="todo-form">
+                <input type="text" id="task-input" placeholder="Adicionar nova tarefa.">
+                <button id="btn-task" type="submit">+</button>
+                </form>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+
+        <div class="container-weather">
+            <div class="container">
+            <div class="user-profile">
+                <div class="user-info">
+                    <span class="notification"><img src="img/notificacao.png" alt=""></span>
+                    <img src="img/person-prin.jpg" alt="">
+                    <h3>username@gmail.com</h3>
+                </div>
+                </div>
+            </div>
+            <div class="title-not">
+                <h2>Notificação</h2>
+            </div>
+            <div class="notification-box">
+                <div class="content">
+                  <img src="img/postar.png" alt="Ícone de notificação">
+                  <p>Laura te mandou uma nova  tarefa para realizar</p>
+                </div>
+                <span class="date">10 de julho, 13:00</span>
+                <button id="verButton">Ver</button>
+              </div>
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close-button" onclick="closeModal()">&times;</span>
+                  <p>Me siga no Github ❤️! User: LauraMilly</p>
+                  <button onclick="closeModal()">Fechar</button>
+                </div>
+              </div>
+              
+              <div class="title-chat">
+                <h2>Team Chat..<span>
+                    <img src="img/person1.jpg" alt=""><img src="img/person2.jpg" alt=""><img src="img/person3.jpg" alt="">
+                </span>
+                <a href="#">Convidar amigo</a></h2>
+            </div>
+              <div class="chat-container">
+                <div class="chat-main">
+                  <div class="chat-header">
+                    <img src="img/perfil.jpg" alt="Profile 1">
+                    <h2>Laura Souza</h2>
+                  </div>
+                  <div class="message-list">
+                  </div>
+                  <div class="message-input">
+                    <textarea id="messageInput" placeholder="Digite sua mensagem..."></textarea>
+                    <button id="sendButton">Enviar</button>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          
+    </main>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
